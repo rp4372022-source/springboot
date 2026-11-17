@@ -4,6 +4,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public class ProductRepo {
@@ -31,6 +32,6 @@ public class ProductRepo {
     }
 
     public Product getProduct(int id) {
-        return productList.get(id);
+            return productList.stream().filter(e -> e.getId() == id).findFirst().orElse(null);
     }
 }
