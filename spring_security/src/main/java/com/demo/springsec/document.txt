@@ -1,0 +1,4 @@
+default username = username
+default password = generated at server starting
+
+for custom username and pass check the application.properties
